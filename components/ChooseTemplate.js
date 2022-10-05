@@ -10,7 +10,7 @@ const ChooseTemplate = () => {
 
   const editTemplate = (selectedTemplate) => {
       //* selectedTemplate array is like this : ['Modal Component','Popup Picture from figma','picture of popup', true/false'(boolean for does popup have logo section?)']
-    setChosenModal([selectedTemplate[0],selectedTemplate[3]])
+    setChosenModal([selectedTemplate[0],selectedTemplate[3],selectedTemplate[2]])
     setPopupImage(selectedTemplate[2])
   }
   return (

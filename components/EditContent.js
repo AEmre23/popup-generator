@@ -14,9 +14,8 @@ const EditContent = () => {
     setPopupImage,
     setImageURL
   } = useContext(SelectedContext)
-  const { chosenModal,modalArray } = useContext(ModalsContext)
-  let chosen = chosenModal[0].name.at(-1)
-  let defaultImg = modalArray[chosen - 1][2]
+  const { chosenModal } = useContext(ModalsContext)
+  let defaultImg = chosenModal[2]
 
   const text1Handler = (e) => {
     let value = e.target.value

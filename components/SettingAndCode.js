@@ -31,20 +31,14 @@ const SettingAndCode = () => {
   const {chosenModal} = useContext(ModalsContext)
   const [giveCode, setGiveCode] = useState(false)
 
-  function selectedLanguages() {
-    let arrayOfLangs=[]
-    for (let x = 0; x < browserLanguage.length;x++) {
-      arrayOfLangs.push(browserLanguage[x].join())
-    }
-    return arrayOfLangs
-  }
 
   function modalName() {
-    let modalName = chosenModal[0].name.toLowerCase()
-    switch (modalName) {
-      case 'modal1':
+    let str
+    let modalPicIncludesName = chosenModal[2].src.toLowerCase()
+    switch (modalPicIncludesName.includes(str)) {
+      case str=='modal1':
         return 'http://yourjavascript.com/4025542511/modal1.js'
-      case 'modal2':
+      case str=='modal2':
         return ''
     }
   }
