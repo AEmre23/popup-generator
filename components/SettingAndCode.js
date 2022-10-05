@@ -33,14 +33,10 @@ const SettingAndCode = () => {
 
 
   function modalName() {
-    let str
     let modalPicIncludesName = chosenModal[2].src.toLowerCase()
-    switch (modalPicIncludesName.includes(str)) {
-      case str=='modal1':
-        return 'modal1.js'
-      case str=='modal2':
-        return ''
-    }
+    if(modalPicIncludesName.includes('modal1')) return 'modal1.js'
+    else if (modalPicIncludesName.includes('modal2')) return 'modal2.js'
+    else return 'modal1.js'
   }
 
   const codeCopier = (e) => {

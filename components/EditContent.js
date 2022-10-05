@@ -70,11 +70,21 @@ const EditContent = () => {
         Edit your content
       </div>
       <div className="flex flex-col gap-2">
+        {text1.length > 0 &&
         <input onBlur={text1Handler} type='text' placeholder={text1} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500"/>
-        <input onBlur={text2Handler} type='text' placeholder={text2} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500"/>
-        <input onBlur={inputText1Handler} type='text' placeholder={inputText1} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500"/>
-        <input onBlur={inputText2Handler} type='text' placeholder={inputText2} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500"/>
-        <input onBlur={buttonTextHandler} type='text' placeholder={buttonText} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500"/>
+        }
+        {text2.length > 0 &&
+        <input onBlur={text2Handler} type='text' placeholder={text2} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500" />
+        }
+        {inputText1.length > 0 &&
+        <input onBlur={inputText1Handler} type='text' placeholder={inputText1} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500" />
+        }
+        {inputText2.length > 0 &&
+        <input onBlur={inputText2Handler} type='text' placeholder={inputText2} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500" />
+        }
+        {buttonText.length > 0 &&
+        <input onBlur={buttonTextHandler} type='text' placeholder={buttonText} className="p-2 w-96 text-sm border-2 rounded-lg focus:outline-purple-500 focus:shadow-xs focus:shadow-purple-500" />
+        }
       </div>
       <div className="text-md mt-4 mb-4">
         Upload Image

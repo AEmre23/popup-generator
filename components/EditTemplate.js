@@ -17,7 +17,15 @@ const EditTemplate = () => {
       text2,
       inputText1,
       inputText2,
-      buttonText
+      buttonText,
+      setText1,
+      setText2,
+      setinputText1,
+      setinputText2,
+      setbuttonText,
+      setSelectedSize,
+      setSelectedPosition,
+      setSelectedColor,
   } = useContext(SelectedContext)
 
   const Modal = chosenModal[0]
@@ -25,6 +33,14 @@ const EditTemplate = () => {
   const changeTemplate = () => {
     if(window.confirm('Do you want to change template?')){
       setChosenModal([])
+      setText1('')
+      setText2('')
+      setinputText1('')
+      setinputText2('')
+      setbuttonText('')
+      setSelectedSize('medium')
+      setSelectedPosition(5)
+      setSelectedColor('bg-[#7D4AEA]')
       document.getElementById('templates').scrollIntoView();
     }
   }

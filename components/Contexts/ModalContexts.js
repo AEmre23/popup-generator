@@ -1,5 +1,6 @@
 import { useState, createContext } from 'react'
 import Modal1 from '../modals/modal1'
+import Modal2 from '../modals/modal2'
 
 import modal1 from '../assets/modalpics/modal1-pic.png' // Whole popup appearance
 import modal2 from '../assets/modalpics/modal2-pic.png'
@@ -15,6 +16,7 @@ import modal11 from '../assets/modalpics/modal11-pic.png'
 import modal12 from '../assets/modalpics/modal12-pic.png'
 
 import Modal1Img from '../assets/modal1.png' //Only image
+import Modal2Img from '../assets/modal2.png'
 
 export const ModalsContext = createContext();
 
@@ -25,7 +27,7 @@ const ModalProvider = (props) => {
   const [modalArray, setModalArray] = useState([
     // boolen is for model have a logo section or not
     [Modal1, modal1, Modal1Img, false],
-    [Modal1, modal2, Modal1Img, false],
+    [Modal2, modal2, Modal2Img, false],
     [Modal1, modal3, Modal1Img, false],
     [Modal1, modal4, Modal1Img, false],
     [Modal1, modal5, Modal1Img, false],
