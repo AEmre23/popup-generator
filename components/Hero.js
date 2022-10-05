@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import heroModal from './assets/hero.png'
 import glass from './assets/glass.png'
@@ -6,8 +6,10 @@ import hero1 from './assets/hero-i1.png'
 import hero2 from './assets/hero-i2.png'
 import {AiOutlineCheck} from 'react-icons/ai'
 import Header from './Header'
+import { ModalsContext } from './Contexts/ModalContexts'
 
 const Hero = () => {
+  const {openEditor,setOpenEditor} = useContext(ModalsContext)
   return (
     <>
     <div className="h-screen relative bg-gradient-to-t from-[#E3F2F7] flex flex-col items-center to-white">
@@ -21,7 +23,7 @@ const Hero = () => {
           rotate-90 that can becomposed to build any design, directly in your markup.
           </div>
         <a href="#templates">
-          <button className="bg-[#7D4AEA] p-4 px-6 text-lg text-white rounded-xl transition-all hover:brightness-110 shadow-[0px_5px_10px_2px_#7D4AEA45] font-inter">
+          <button onClick={()=> setOpenEditor(true)} className="bg-[#7D4AEA] p-4 px-6 text-lg text-white rounded-xl transition-all hover:brightness-110 shadow-[0px_5px_10px_2px_#7D4AEA45] font-inter">
             Try it out now
           </button>
         </a>
@@ -74,7 +76,8 @@ const Hero = () => {
           <div className="text-3xl font-medium">Popupsmart meets<br />all your business<br />needs.</div>
         </div>
       </div>
-      <div className="bg-white h-[300px] flex justify-center items-center w-full">
+      {openEditor &&
+      <div  id='templates' className="bg-white h-[300px] flex justify-center items-center w-full">
         <div className="w-10/12">
           <div className="font-poppins mb-6 font-semibold text-4xl">
             Modal Card Generator
@@ -86,6 +89,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      }
     </>
 
   )

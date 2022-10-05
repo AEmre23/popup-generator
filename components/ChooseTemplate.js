@@ -5,7 +5,7 @@ import { SelectedContext } from './Contexts/SelectedContext'
 import Header from './utilities/header'
 
 const ChooseTemplate = () => {
-  const { modalArray, setChosenModal } = useContext(ModalsContext)
+  const { modalArray, setChosenModal,openEditor,setOpenEditor } = useContext(ModalsContext)
   const { setPopupImage } = useContext(SelectedContext)
 
   const editTemplate = (selectedTemplate) => {
@@ -14,7 +14,9 @@ const ChooseTemplate = () => {
     setPopupImage(selectedTemplate[2])
   }
   return (
-    <div id='templates' className="h-screen w-full my-6 bg-white rounded-3xl">
+    <>
+    {openEditor &&
+    <div className="max-h-screen w-full my-6 bg-white rounded-3xl">
       <div className='px-32 py-4'>
         <Header number='1' text='Choose Your Template' />
         <div className="flex flex-wrap justify-between items-center gap-[4%] gap-y-5">
@@ -35,7 +37,9 @@ const ChooseTemplate = () => {
         </div>
         
       </div>
-    </div>
+      </div>
+      }
+    </>
   )
 }
 
