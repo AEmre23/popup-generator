@@ -26,7 +26,7 @@ const Header = () => {
         </div>
         <div className="w-2/5 flex justify-end gap-6 items-center h-auto">
           <button className="transition-all py-[2px] px-3 border-2 rounded-xl border-white hover:shadow-md hover:border-black">Sign In</button>
-          <a href="#templates"><button onClick={()=> setOpenEditor(true)} className="bg-[#7D4AEA] py-1 px-3 rounded-xl text-white shadow-md transition-all border-2 hover:bg-white hover:text-[#7D4AEA] hover:border-[#7D4AEA]">Try for free</button></a>
+          <a href="#templates"><button onClick={()=> setOpenEditor(true)} className="bg-[#7D4AEA] py-1 px-3 rounded-xl text-white shadow-md transition-all border-2 border-[#7D4AEA] hover:bg-white hover:text-[#7D4AEA]">Try for free</button></a>
         </div>
       </div>
     </div>

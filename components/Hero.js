@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import Image from 'next/image'
 import heroModal from './assets/hero.png'
 import glass from './assets/glass.png'
@@ -9,6 +9,7 @@ import Header from './Header'
 import { ModalsContext } from './Contexts/ModalContexts'
 
 const Hero = () => {
+  const [animate,setAnimate] = useState(true)
   const {openEditor,setOpenEditor} = useContext(ModalsContext)
   return (
     <>
@@ -23,7 +24,7 @@ const Hero = () => {
           rotate-90 that can becomposed to build any design, directly in your markup.
           </div>
         <a href="#templates">
-          <button onClick={()=> setOpenEditor(true)} className="bg-[#7D4AEA] p-4 px-6 text-lg text-white rounded-xl transition-all hover:brightness-110 shadow-[0px_5px_10px_2px_#7D4AEA45] font-inter">
+            <button onClick={() => { setOpenEditor(true);setAnimate(false) }} className={`bg-[#7D4AEA] p-4 px-6 text-lg text-white rounded-xl transition-all ${animate && 'animate-pulse'} hover:animate-none hover:brightness-110 shadow-[0px_5px_10px_2px_#7D4AEA45] font-inter`}>
             Try it out now
           </button>
         </a>

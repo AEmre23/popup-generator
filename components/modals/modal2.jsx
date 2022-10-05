@@ -3,8 +3,6 @@ import { ImCancelCircle } from 'react-icons/im'
 
 import { SelectedContext } from '../Contexts/SelectedContext'
 
-import { validateEmail } from '../functions/emailValidation'
-
 import positionCheck from '../functions/positionChecker'
 
 const Modal2 = () => {
@@ -68,7 +66,7 @@ const Modal2 = () => {
   }
 
   return (
-    <div ref={close} style={positionCheck(selectedPosition)} className={`relative rounded-xl bg-white hidden`}>
+    <div ref={close} style={positionCheck(selectedPosition)} className={`relative rounded-xl shadow-lg bg-white hidden`}>
       <div style={sizeCheck()} className="p-7 flex justify-start gap-8 items-center">
         <div style={{backgroundImage:`url(${popupImage.src ? popupImage.src : popupImage})`}} className={`w-[90px] h-[90px] ${selectedSize == 'large' && 'w-[100px] h-[100px]'} ${newColor} bg-no-repeat bg-center rounded-full `}>
           <ImCancelCircle onClick={popUpCloser} className="scale-150 hover:scale-[1.58] cursor-pointer absolute top-6 right-6 text-gray-600 transition-all"/>

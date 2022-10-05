@@ -5,7 +5,7 @@ import { SelectedContext } from './Contexts/SelectedContext'
 import Header from './utilities/header'
 
 const ChooseTemplate = () => {
-  const { modalArray, setChosenModal,openEditor,setOpenEditor } = useContext(ModalsContext)
+  const { modalArray,chosenModal, setChosenModal,openEditor,setOpenEditor } = useContext(ModalsContext)
   const { setPopupImage } = useContext(SelectedContext)
 
   const editTemplate = (selectedTemplate) => {
@@ -15,7 +15,9 @@ const ChooseTemplate = () => {
   }
   return (
     <>
-    {openEditor &&
+      {openEditor &&
+      <>
+      {chosenModal.length<1 &&
     <div className="max-h-screen w-full my-6 bg-white rounded-3xl">
       <div className='px-32 py-4'>
         <Header number='1' text='Choose Your Template' />
@@ -38,6 +40,8 @@ const ChooseTemplate = () => {
         
       </div>
       </div>
+        }
+        </>
       }
     </>
   )
