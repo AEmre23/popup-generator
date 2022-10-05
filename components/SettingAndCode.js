@@ -37,7 +37,7 @@ const SettingAndCode = () => {
     let modalPicIncludesName = chosenModal[2].src.toLowerCase()
     switch (modalPicIncludesName.includes(str)) {
       case str=='modal1':
-        return 'http://yourjavascript.com/4025542511/modal1.js'
+        return 'modal1.js'
       case str=='modal2':
         return ''
     }
@@ -91,8 +91,8 @@ const SettingAndCode = () => {
           <div id='textToCopy'>
             <Highlight className="rounded-lg p-3 break-words text-xs mt-8 w-[400px] h-72 scrollbarcode overflow-x-auto overflow-y-auto" language="javascript">
               {`<script type="text/javascript"
- src="${modalName()}">
- </script>
+src="https://popup-deploy-modals.netlify.app/${modalName()}">
+</script>
 <script> window.customizePopup({
   size:'${selectedSize}',
   position:'${selectedPosition}',

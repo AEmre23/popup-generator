@@ -64,7 +64,7 @@ const EditContent = () => {
   }
 
   return (
-    <div className="w-full flex flex-col h-auto justify-around px-24 py-12 bigscreen:py-44">
+    <div className="w-full flex flex-col h-screen justify-around px-24 py-12 bigscreen:py-28">
       <Header number='3' text='Content' />
       <div className="text-md mt-3 mb-3">
         Edit your content

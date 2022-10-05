@@ -49,7 +49,6 @@ const Modal1 = (props) => {
       validate.current.innerText = 'Invalid Info'
       validate.current.classList.add('animate-pulse') 
     }else{
-      console.log(fullName, email)
       validate.current.style.backgroundColor = 'lightgreen'
       validate.current.innerText = 'Done!'
       validate.current.classList.remove('animate-pulse') 

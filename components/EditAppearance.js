@@ -43,7 +43,7 @@ const EditAppearance = () => {
   }
 
   return (
-    <div className="w-full flex flex-col h-screen justify-around px-24 py-12 bigscreen:py-44">
+    <div className="w-full flex flex-col h-screen justify-around px-24 py-12 bigscreen:py-28">
       <Header number='2' text='Appearance' subtext=' (Size,colors,logo)' /> 
       <div className="flex flex-col gap-2">
         <div className="font-medium">Size</div>

@@ -24,9 +24,11 @@ const ChooseTemplate = () => {
                 <Image src={selectedTemplate[1]} alt='template-image' /> 
               </div>
             <div className='bg-purple-800/60 w-full h-full p-8 absolute flex items-center justify-center top-0 left-0 rounded-xl transition-all opacity-0 hover:opacity-100'>
-              <button onClick={()=>editTemplate(selectedTemplate)} className="bg-white  text-[#7D4AEA] w-40 py-3 rounded-lg transition-all hover:scale-105 font-bold shadow-lg">
-                <a href='#edit'>Select Template</a>
-              </button>
+              <a href='#edit'>
+                <button onClick={() => editTemplate(selectedTemplate)} className="bg-white  text-[#7D4AEA] w-40 py-3 rounded-lg transition-all hover:scale-105 font-bold shadow-lg">
+                  Select Template
+                </button>
+              </a>
             </div>    
           </div>
           ))}

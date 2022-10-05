@@ -78,9 +78,8 @@
     border-radius: 100vh;
   }
   .scrollbar::-webkit-scrollbar-thumb {
-
     border-radius: 100vh;
-    border: 3px solid white;
+    border: 3px solid lightgray;
     opacity: 0.6;
   }
   .scrollbarcode::-webkit-scrollbar {
@@ -98,5 +97,12 @@
   }
   .rotate{
     transform: rotate(180deg);
+  }
+  .openedText {
+    background-color: #F5F5F5;
+    padding-bottom:10px;
+  }
+  .openedHeader{
+    color:black !important;
   }
 }
