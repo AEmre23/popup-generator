@@ -1,5 +1,5 @@
-  function positionCheck(props) {
-    switch (props.position) {
+  function positionCheck(prop) {
+    switch (prop) {
       case '1':
         return ({
           position: 'absolute',

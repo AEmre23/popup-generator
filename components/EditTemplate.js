@@ -49,16 +49,7 @@ const EditTemplate = () => {
               <MdOutlineChangeCircle className="w-7 h-7 rounded hover:-rotate-180 duration-1000 transition-all" alt='change template' />
               <p className="absolute pointer-events-none cursor opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 w-max top-1 transition-all font-medium duration-500 right-9 text-purple-700 ">Change Template</p>
             </button>
-            <Modal 
-              color={selectedColor}
-              position={selectedPosition}
-              size={selectedSize}
-              text1={text1}
-              text2={text2}
-              inputText1={inputText1}
-              inputText2={inputText2}
-              buttonText={buttonText}
-            />
+            <Modal />
           </div>
         </div>
       </div>

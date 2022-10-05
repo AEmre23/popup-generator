@@ -9,6 +9,13 @@ import positionCheck from '../functions/positionChecker'
 
 const Modal1 = (props) => {
   const {
+    text1,
+    text2,
+    inputText1,
+    inputText2,
+    selectedColor,
+    selectedPosition,
+    selectedSize,
     buttonText,
     popupImage,
     setText1,
@@ -64,7 +71,7 @@ const Modal1 = (props) => {
 
   let newColor
   function colorCheck() {
-    switch (props.color) {
+    switch (selectedColor) {
       case 'bg-[#F37C34]':
         newColor = {
           button: `bg-[#F37C34]`,
@@ -111,30 +118,30 @@ const Modal1 = (props) => {
   }
   colorCheck()
   function sizeCheck() {
-    if (props.size == 'small') return {height:'300px',width: '500px'}
-    if (props.size == 'large') return {height:'450px',width: '800px'}
+    if (selectedSize == 'small') return {height:'300px',width: '500px'}
+    if (selectedSize == 'large') return {height:'450px',width: '800px'}
     else return {height:'350px',width: '600px'}
   }
 
   return (
-    <div ref={close} style={positionCheck(props)}  className="hidden opacity-0 cursor-default transition-opacity duration-300 ">
+    <div ref={close} style={positionCheck(selectedPosition)}  className="hidden opacity-0 cursor-default transition-opacity duration-300 ">
       <div style={sizeCheck()} className="flex rounded-xl overflow-hidden w-full h-full shadow-2xl">
         <div  className={`flex flex-col justify-around bg-white w-1/2 p-6`}>
-          <div className={` ${props.size == 'small' && 'text-2xl'} ${props.size == 'large' && 'text-4xl'} text-3xl break-words font-bold`}>
-            {props.text1}
+          <div className={` ${selectedSize == 'small' && 'text-2xl'} ${selectedSize == 'large' && 'text-4xl'} text-3xl break-words font-bold`}>
+            {text1}
           </div>
-          <div className={` ${props.size == 'small' && 'text-base '} ${props.size == 'large' && 'text-2xl -mt-7'} break-words text-xl font-medium`}>
-            {props.text2}
+          <div className={` ${selectedSize == 'small' && 'text-base '} ${selectedSize == 'large' && 'text-2xl -mt-7'} break-words text-xl font-medium`}>
+            {text2}
           </div>
           <form onSubmit={formHandler} className="flex flex-col gap-4 ">
             <div className="border-2 rounded-md text-sm">
-              <input id="fullname" className={` ${newColor.inputFocus} p-2 w-full placeholder:text-black`} type="text" placeholder={props.inputText1} />
+              <input id="fullname" className={` ${newColor.inputFocus} p-2 w-full placeholder:text-black`} type="text" placeholder={inputText1} />
             </div>
             <div className="border-2 rounded-md text-sm">
-              <input id="email" className={` ${newColor.inputFocus} p-2 w-full placeholder:text-black`} type="text" placeholder={props.inputText2} />
+              <input id="email" className={` ${newColor.inputFocus} p-2 w-full placeholder:text-black`} type="text" placeholder={inputText2} />
             </div>
             <button ref={validate} className={`active:scale-95 hover:brightness-125 text-sm transition-all flex items-center justify-center ${newColor.button} text-white px-2 py-2.5 rounded-lg`}>
-              {props.buttonText}
+              {buttonText}
             </button>
           </form>
 
