@@ -25,19 +25,19 @@ const ModalProvider = (props) => {
   const [openEditor,setOpenEditor] = useState(false)
   const [chosenModal,setChosenModal] = useState([])
   const [modalArray, setModalArray] = useState([
-    // boolen is for model have a logo section or not
-    [Modal1, modal1, Modal1Img, false],
-    [Modal2, modal2, Modal2Img, false],
-    [Modal1, modal3, Modal1Img, false],
-    [Modal1, modal4, Modal1Img, false],
-    [Modal1, modal5, Modal1Img, false],
-    [Modal1, modal6, Modal1Img, false],
-    [Modal1, modal7, Modal1Img, false],
-    [Modal1, modal8, Modal1Img, false],
-    [Modal1, modal9, Modal1Img, false],
-    [Modal1, modal10, Modal1Img, false],
-    [Modal1, modal11, Modal1Img, false],
-    [Modal1, modal12, Modal1Img, false],                
+    // first boolean is for model have a logo section or not, second one is for is this modal avaiable or not.
+    [Modal1, modal1, Modal1Img, false,true],
+    [Modal2, modal2, Modal2Img, false,true],
+    [Modal1, modal3, Modal1Img, false,false],
+    [Modal1, modal4, Modal1Img, false,false],
+    [Modal1, modal5, Modal1Img, false,false],
+    [Modal1, modal6, Modal1Img, false,false],
+    [Modal1, modal7, Modal1Img, false,false],
+    [Modal1, modal8, Modal1Img, false,false],
+    [Modal1, modal9, Modal1Img, false,false],
+    [Modal1, modal10, Modal1Img, false,false],
+    [Modal1, modal11, Modal1Img, false,false],
+    [Modal1, modal12, Modal1Img, false,false],                
   ])
   return (
     <ModalsContext.Provider value={{modalArray,setModalArray,chosenModal,setChosenModal,openEditor,setOpenEditor}}>

@@ -15,13 +15,13 @@ const Header = () => {
             <div className="font-extrabold text-xl">modal.cards</div>
           </div>
           <div className="flex gap-8 font-medium pr-14 bigscreen:pr-52">
-            <div className="flex gap-2 items-center cursor-pointer">
-              <div className="hover:text-gray-500 transition-all">Solutions</div>
+            <div className="flex hover:text-gray-500 transition-all gap-2 items-center cursor-pointer">
+              <div className="">Solutions</div>
               <AiOutlineDown className="mt-1 h-4"/>
             </div>
-            <div className="hover:text-gray-500 transition-all cursor-pointer">Product Tour</div>
-            <div className="hover:text-gray-500 transition-all cursor-pointer">Showcase</div>
-            <div className="hover:text-gray-500 transition-all cursor-pointer">Pricing</div>
+            <div className="hover:text-gray-500 transition-all cursor-pointer hover:-translate-y-[2px]">Product Tour</div>
+            <div className="hover:text-gray-500 transition-all cursor-pointer hover:-translate-y-[2px]">Showcase</div>
+            <div className="hover:text-gray-500 transition-all cursor-pointer hover:-translate-y-[2px]">Pricing</div>
           </div>
         </div>
         <div className="w-2/5 flex justify-end gap-6 items-center h-auto">

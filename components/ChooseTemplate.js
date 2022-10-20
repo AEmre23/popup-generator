@@ -26,14 +26,14 @@ const ChooseTemplate = () => {
           <div key={i} className="bg-[#EAEAEA] max-w-[22%] max-h-[22%] w-[277px] h-[185px] overflow-hidden bigscreen:min-w-[362px] bigscreen:min-h-[236px] flex items-center justify-center rounded-xl relative">
             <div className='relative p-20'>
               <Image src={selectedTemplate[1]} alt='template-image' /> 
-            </div>
-            <div className='bg-purple-800/60 w-full h-full p-8 absolute flex items-center justify-center top-0 left-0 rounded-xl transition-all opacity-0 hover:opacity-100'>
-              <a href='#edit'>
-                <button onClick={() => editTemplate(selectedTemplate)} className="bg-white  text-[#7D4AEA] w-40 py-3 rounded-lg transition-all hover:scale-105 font-bold shadow-lg">
-                  Select Template
-                </button>
-              </a>
-            </div>    
+              </div>
+              <div className={`bg-purple-800/60 w-full h-full p-8 absolute flex items-center justify-center top-0 left-0 rounded-xl transition-all ${selectedTemplate[4] ? 'opacity-0 hover:opacity-100' : 'opacity-100 cursor-not-allowed' } `}>
+                <a className={`${selectedTemplate[4] ? '' : 'pointer-events-none cursor-not-allowed' }`} href='#edit'>
+                  <button onClick={() => editTemplate(selectedTemplate)} className={`bg-white ${selectedTemplate[4] ? 'text-[#7D4AEA]' : 'text-gray-600'} w-40 py-3 rounded-lg transition-all hover:scale-105 font-bold shadow-lg`}>
+                    {selectedTemplate[4] ? 'Select Template' : 'Not Ready Yet'}
+                  </button>
+                </a>
+              </div>
           </div>
           ))}
         </div>
